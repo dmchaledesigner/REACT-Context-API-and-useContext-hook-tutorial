@@ -1,12 +1,15 @@
-import { useContext } from 'react'; // import Counter Content
-import { CounterContext } from './contexts/CounterContext'; // import CounterContext File
+// 1. import hook
+import { useContext } from 'react';
 
+// 2. import context file
+import { CounterContext } from './contexts/CounterContext'; // import CounterContext File
 
 
 
 const MyCounter = () => {
 
-    const { count, setCount, increaseCount, decreaseCount } = useContext(CounterContext)
+    // 3. create useContext instance and pull out what we need for the state to work 
+    const { count, increaseCount, decreaseCount } = useContext(CounterContext)
 
     return (
         <div className="flex">
